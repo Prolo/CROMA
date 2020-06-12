@@ -68,6 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Index.html" />
+    <Content Include="js\JavaScript.js" />
+    <Content Include="titulo.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

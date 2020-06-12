@@ -3,18 +3,21 @@
 <head>
     <meta charset="utf-8">
     <title>Display Webcam Stream</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/js/JavaScript.js"></script>
 
     <style>
         #container {
             margin: 0px auto;
-            width: 500px;
-            height: 375px;
+            width: 640px;
+            height: 480px;
             border: 10px #333 solid;
+            background-image: url("titulo.png");
         }
 
         #videoElement {
-            width: 500px;
-            height: 375px;
+            width: 640px;
+            height: 480px;
             background-color: #666;
         }
     </style>
@@ -25,18 +28,10 @@
         <video autoplay="true" id="videoElement">
         </video>
     </div>
-    <script>
-        var video = document.querySelector("#videoElement");
+    <div id="container" >
+        <canvas id="c1" width="640" height="480" />
+    </div>
 
-        if (navigator.mediaDevices.getUserMedia) {
-            navigator.mediaDevices.getUserMedia({ video: true })
-                .then(function (stream) {
-                    video.srcObject = stream;
-                })
-                .catch(function (err0r) {
-                    console.log("Something went wrong!");
-                });
-        }
-    </script>
+    
 </body>
 </html>
